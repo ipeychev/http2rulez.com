@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Iliyan Peychev">
+
+	    <title>HTTP 2.0 Rulez! WebComponents Demo</title>
+
+	    <!-- Bootstrap Core CSS -->
+    	<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    	<!-- icons -->
+	    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+	    <!-- Custom CSS -->
+	    <link href="assets/css/header.css" rel="stylesheet">
+	    <link href="assets/css/main.css" rel="stylesheet">
+
+	    <!-- Importing Web Component's Polyfill -->
+		<script src="bower_components/platform/platform.js"></script>
+
+		<!-- Importing Custom Elements -->
+		<link rel="import" href="bower_components/tracking-elements/src/image-object-tracking.html">
+		<link rel="import" href="bower_components/tracking-elements/src/canvas-object-tracking.html">
+		<link rel="import" href="bower_components/tracking-elements/src/video-object-tracking.html">
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Navigation -->
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <ul class="nav navbar-nav">
+	                    <li>
+	                        <a href="index.html">Home</a>
+	                    </li>
+	                    <li>
+	                        <a class="selected" href="web-components.html">Web Components</a>
+	                    </li>
+	                    <li>
+	                        <a href="about.html">About</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container -->
+	    </nav>
+
+	    <!-- Page Content -->
+	    <div class="container page" id="webComponents">
+		    <div class="row">
+		        <div class="col-md-12">
+		            <h1>HTTP/2, SPDY and QUIC rulez and here is the evidence</h1>
+
+		            <hr>
+
+		            <div>
+		                <p>
+		                    The purpose of this site is to show what is the difference when same content is being served via different protocols - <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a>, <a href="https://http2rulez.com:8081/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
+		                </p>
+
+		                <p>
+		                    The current page uses <a href="http://trackingjs.com/">TrackingJS</a> project and its <a href="http://trackingjs.com/docs.html#web-components">Web Components</a> in order to detect faces. Web Components are still heavy beasts, so, they are perfect candidate to see if they will load faster via HTTP 2.0 and SPDY.
+		                </p>
+
+		                <p>
+		                    Currently the site can be served via <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a>, <a href="https://http2rulez.com:8081/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
+		                </p>
+
+		                <p>
+		                    Click on the links above to <em>feel</em> what is difference on site loading, use <a href="http://www.webpagetest.org/">webpagetest.org</a> to check the site, or use the development tools of Chrome, Firefox, Safari or IE11. You may also try via mobile browsers and also mobile networks.
+		                </p>
+
+		                <p>
+		                Note: In order to see how these pages load via HTTP/2, you have to use Chrome with SPDY/4 (HTTP 2.0) flag enabled. You may enable it from Chrome flags page - type in Chrome address bar "chrome://flags" and search in the page for "HTTP/2" or "SPDY/4".
+		            </div>
+		        </div>
+		    </div>
+
+		    <hr>
+
+	    	<p>An example of using <code>&lt;image-object-tracking-element&gt;</code>:</p>
+
+			<!-- Using Custom Elements -->
+			<img is="image-object-tracking" target="face" src="assets/images/faces.png" />
+
+			<script>
+			var img = document.querySelector('img');
+
+			img.addEventListener('track', function(event) {
+			  event.detail.data.forEach(function(rect) {
+			    plotRectangle(img, rect);
+			  });
+			});
+			</script>
+
+
+			<p>An example of using <code>&lt;canvas-object-tracking-element&gt;</code>:</p>
+
+			<!-- Using Custom Elements -->
+			<canvas is="canvas-object-tracking" target="face"></canvas>
+
+			<script>
+			var canvas = document.querySelector('canvas');
+
+			canvas.addEventListener('track', function(event) {
+			  event.detail.data.forEach(function(rect) {
+			    plotRectangle(canvas, rect);
+			  });
+			});
+
+			window.addEventListener('polymer-ready', function(event) {
+			  // Waits the image to be loaded nto the canvas.
+			  tracking.Canvas.loadImage(canvas, 'assets/images/faces.png', 0, 0, 600, 348, function() {
+			    canvas.trackerTask.stop().run();
+			  });
+			});
+			</script>
+
+			<!-- Private Helpers -->
+			<script>
+			function plotRectangle(el, rect, opt_div) {
+			  var div = opt_div || document.createElement('div');
+			  div.style.position = 'absolute';
+			  div.style.border = '2px solid ' + (rect.color || 'magenta');
+			  div.style.width = rect.width + 'px';
+			  div.style.height = rect.height + 'px';
+			  div.style.left = el.offsetLeft + rect.x + 'px';
+			  div.style.top = el.offsetTop + rect.y + 'px';
+			  document.body.appendChild(div);
+			  return div;
+			}
+			</script>
+
+	    </div>
+
+	    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014. The images used in this site belong to their authors.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    </body>
+</html>

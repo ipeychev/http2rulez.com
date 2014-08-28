@@ -10,6 +10,10 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #d3d3d3;
+}
+
 .margin30{
     margin: 30px 0;
 }
