@@ -141,6 +141,40 @@
 			}
 			</script>
 
+
+
+			 <p>An example of using <code>&lt;video-object-tracking-element&gt;</code>:</p>
+
+			  <!-- Using Custom Elements -->
+			  <video is="video-object-tracking" target="face" camera="true" width="480" height="320" autoplay><video>
+
+			  <script>
+			    var video = document.querySelector('video');
+
+			    video.addEventListener('track', function(event) {
+			    	event.detail.data.forEach(function(rect) {
+					    plotRectangle(canvas, rect);
+					});
+			    });
+			  </script>
+
+
+			  <!-- Private Helpers -->
+			  <script>
+				function plotRectangle(el, rect, opt_div) {
+				  var div = opt_div || document.createElement('div');
+				  div.style.position = 'absolute';
+				  div.style.border = '2px solid ' + (rect.color || 'magenta');
+				  div.style.width = rect.width + 'px';
+				  div.style.height = rect.height + 'px';
+				  div.style.left = el.offsetLeft + rect.x + 'px';
+				  div.style.top = el.offsetTop + rect.y + 'px';
+				  document.body.appendChild(div);
+				  return div;
+				}
+				</script>
+
+
 	    </div>
 
 	    <div class="container">
