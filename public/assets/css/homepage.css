@@ -1,0 +1,88 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.margin30{
+    margin: 30px 0;
+}
+
+.box-center{
+    float: none;
+    margin: 0 auto;
+}
+
+blockquote{
+    border-left: 0;
+}
+
+blockquote small, blockquote .small {
+    color: #999;
+    display: block;
+    line-height: 1.42857;
+}
+small, .small {
+    font-size: 85%;
+}
+
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding: 10px;
+    color: #d17581;
+}
+
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+.thumbnail > img, .thumbnail a > img{margin:0;}
+
+
+ul{margin: 0; padding: 0}
+ul.thumbnails{margin-left: -15px}
+li{list-style-type: none;}
+
+.hero-unit {
+    background-color: #eeeeee;
+    border-radius: 6px;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 20px 60px;
+}
+

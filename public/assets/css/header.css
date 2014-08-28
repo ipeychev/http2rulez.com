@@ -1,0 +1,10 @@
+.navbar-inverse .navbar-nav > li > a.selected{
+	color:#FFF;
+	border-bottom: 3px solid;
+	font-size: 1.5em;
+}
+
+footer {
+    margin: 15px 0;
+    text-align: right;
+}

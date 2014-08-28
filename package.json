@@ -1,0 +1,35 @@
+{
+  "name": "http2rulez.com",
+  "version": "0.0.1",
+  "description": "HTTP2Rulez! Website",
+  "main": "index.html",
+  "dependencies": {
+    "http2": "^2.7.1",
+    "http": "^0.0.0",
+    "node-static": "^0.7.4",
+    "spdy": "^1.28.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipeychev/http2rulez.com"
+  },
+  "keywords": [
+    "http2",
+    "spdy",
+    "javascript",
+    "ssl",
+    "http",
+    "http/2",
+    "spdy/4"
+  ],
+  "author": "Iliyan Peychev",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/ipeychev/http2rulez.com/issues"
+  },
+  "homepage": "https://github.com/ipeychev/http2rulez.com"
+}
