@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Iliyan Peychev">
+
+	    <title>HTTP 2.0 Rulez! WebComponents Demo</title>
+
+	    <!-- Bootstrap Core CSS -->
+    	<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    	<!-- icons -->
+	    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+	    <!-- Custom CSS -->
+	    <link href="assets/css/header.css" rel="stylesheet">
+	    <link href="assets/css/main.css" rel="stylesheet">
+
+	    <!-- Importing Web Component's Polyfill -->
+		<script src="bower_components/platform/platform.js"></script>
+
+		<!-- Importing Custom Elements -->
+		<link rel="import" href="bower_components/tracking-elements/src/image-object-tracking.html">
+		<link rel="import" href="bower_components/tracking-elements/src/canvas-object-tracking.html">
+		<link rel="import" href="bower_components/tracking-elements/src/video-object-tracking.html">
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Navigation -->
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <ul class="nav navbar-nav">
+	                    <li>
+	                        <a href="index.html">Home</a>
+	                    </li>
+	                    <li>
+	                        <a href="web-components.html">Web Components</a>
+	                    </li>
+	                    <li>
+	                        <a class="selected" href="about.html">About</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container -->
+	    </nav>
+
+	    <!-- Page Content -->
+	    <div class="container page" id="webComponents">
+		    <div class="row">
+		        <div class="col-md-12">
+		            <div>
+		            	<h1>Why we created this site</h1>
+
+		            	<p>
+		                    This site was created with the idea to help people to get rid of the dark workarounds we were living since Web was created. Which workarounds? Those we called "optimizations", for example:
+		                    <ol>
+		                    	<li>1. Image sprites</li>
+								<li>2. Sharding</li>
+								<li>3. Including resources directly in the page (inlining)</li>
+								<li>4. Concatenating files</li>
+								<li>5. Pack Components into a multipart document</li>
+							</ol>
+
+							<p>
+								There are <a href="http://slides.com/ipeychev/http-2-0-and-quic-protocols-of-the-near-future-and-why-they-re-important#/5">more</a> here... actually, you may read <a href="http://chimera.labs.oreilly.com/books/1230000000545/ch11.html">this chapter</a> from <a href="http://chimera.labs.oreilly.com/books/1230000000545"><em>High Performance Browser Networking</em></a>, an awesome book by <a href="https://www.igvita.com/">Ilya Grigorik</a>.
+							</p>
+		                </p>
+
+		                <h2>Wanna help?</h2>
+
+		                <p>
+		                    Do you want to help us to create more exciting examples? If so, please <a href="https://github.com/ipeychev/http2rulez.com">fork</a> the project and send us pull request. You won't get much, but at least you will spend your efforts to make Web better.
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+
+		    <hr>
+	    </div>
+
+	    <div class="container">
+	        <!-- Footer -->
+	        <footer>
+	            <div class="row">
+	                <div class="col-lg-12">
+	                    <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014. The images used in this site belong to their authors.</p>
+	                </div>
+	            </div>
+	        </footer>
+
+	    </div>
+	    <!-- /.container -->
+    </body>
+</html>
