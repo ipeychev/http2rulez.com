@@ -4,8 +4,9 @@
   "description": "HTTP2Rulez! Website",
   "main": "index.html",
   "dependencies": {
-    "http2": "^2.7.1",
     "http": "^0.0.0",
+    "http2": "^2.7.1",
+    "mime": "^1.2.11",
     "node-static": "^0.7.4",
     "spdy": "^1.28.1"
   },
