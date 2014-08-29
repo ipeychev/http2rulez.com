@@ -1,0 +1,27 @@
+{
+  "name": "http2rulez",
+  "version": "0.0.1",
+  "homepage": "http2rulez.com",
+  "authors": [
+    "Iliyan Peychev <iliyan.peychev@gmail.com>"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chess-board": "~0.0.5",
+    "mark-down": "~0.6.0",
+    "svg-piechart": "~0.0.1"
+  },
+  "resolutions": {
+    "platform": "master",
+    "core-component-page": "master",
+    "polymer": "master"
+  }
+}
