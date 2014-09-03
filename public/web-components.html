@@ -38,11 +38,22 @@
         <![endif]-->
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <ul class="nav navbar-nav">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand">HTTP2Rulez!</a>
+                </div>
+
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                  <ul class="nav navbar-nav">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -52,12 +63,12 @@
                         <li>
                             <a href="about.html">About</a>
                         </li>
-                    </ul>
-                </div>
+                  </ul>
+                </nav>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
-        </nav>
+        </header>
 
         <!-- Page Content -->
         <div class="container page" id="webComponents">
@@ -69,7 +80,7 @@
 
                     <div>
                         <p>
-                            The purpose of this site is to show what is the difference when same content is being served via different protocols - <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a>, <a href="https://http2rulez.com:8082/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
+                            The purpose of this site is to show what is the difference when same content is being served via different protocols - <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a> (please note HTTP/2 implementation requires Chrome Canary for now), <a href="https://http2rulez.com:8082/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
                         </p>
 
                         <p>
@@ -77,7 +88,7 @@
                         </p>
 
                         <p>
-                            Currently the site can be served via <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a>, <a href="https://http2rulez.com:8082/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
+                            Currently the site can be served via <a href="http://http2rulez.com/web-components.html">HTTP</a>, <a href="https://http2rulez.com/web-components.html">HTTP/2</a> (please note HTTP/2 implementation requires Chrome Canary for now), <a href="https://http2rulez.com:8082/web-components.html">SPDY</a> and <a href="https://http2rulez.com:8081/web-components.html">raw SSL</a>.
                         </p>
 
                         <p>
@@ -126,16 +137,25 @@
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014. The images used in this site belong to their authors.</p>
-                </div>
-            </div>
-        </footer>
+        <div class="container page">
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014.<br>Thanks to <a href="https://github.com/shigeki">Shigeki Ohtsu</a>, <a href="https://github.com/molnarg">Gábor Molnár</a> and <a href="http://www.chromium.org/spdy/http2">Johnny Graettinger</a> for their awesome work on HTTP/2 and the advices they provided me!</p>
 
-    </div>
+                        <div class="server-sponsor">
+                            <div>
+                                The server has been provided by:
+                            </div>
+                        </div>
+
+                        <a href="https://altscale.com"><img src="assets/images/altscale-logo-200px.png"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
     <!-- /.container -->
     </body>
 </html>

@@ -2,30 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="">
-	    <meta name="author" content="Iliyan Peychev">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Iliyan Peychev">
 
-	    <title>HTTP 2.0 Rulez! WebComponents Demo</title>
+        <title>HTTP 2.0 Rulez! WebComponents Demo</title>
 
-	    <!-- Bootstrap Core CSS -->
-    	<link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    	<!-- icons -->
-	    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+        <!-- icons -->
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-	    <!-- Custom CSS -->
-	    <link href="assets/css/header.css" rel="stylesheet">
-	    <link href="assets/css/main.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="assets/css/header.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
 
-	    <!-- Importing Web Component's Polyfill -->
-		<script src="bower_components/platform/platform.js"></script>
+        <!-- Importing Web Component's Polyfill -->
+        <script src="bower_components/platform/platform.js"></script>
 
-		<!-- Importing Custom Elements -->
-		<link rel="import" href="bower_components/tracking-elements/src/image-object-tracking.html">
-		<link rel="import" href="bower_components/tracking-elements/src/canvas-object-tracking.html">
-		<link rel="import" href="bower_components/tracking-elements/src/video-object-tracking.html">
+        <!-- Importing Custom Elements -->
+        <link rel="import" href="bower_components/tracking-elements/src/image-object-tracking.html">
+        <link rel="import" href="bower_components/tracking-elements/src/canvas-object-tracking.html">
+        <link rel="import" href="bower_components/tracking-elements/src/video-object-tracking.html">
 
     </head>
     <body>
@@ -34,72 +34,90 @@
         <![endif]-->
 
         <!-- Navigation -->
-	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	        <div class="container">
-	            <!-- Brand and toggle get grouped for better mobile display -->
-	            <div class="navbar-header">
-	                <ul class="nav navbar-nav">
-	                    <li>
-	                        <a href="index.html">Home</a>
-	                    </li>
-	                    <li>
-	                        <a href="web-components.html">Web Components</a>
-	                    </li>
-	                    <li>
-	                        <a class="selected" href="about.html">About</a>
-	                    </li>
-	                </ul>
-	            </div>
-	            <!-- /.navbar-collapse -->
-	        </div>
-	        <!-- /.container -->
-	    </nav>
+        <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-	    <!-- Page Content -->
-	    <div class="container page" id="webComponents">
-		    <div class="row">
-		        <div class="col-md-12">
-		            <div>
-		            	<h1>Why we created this site</h1>
+                    <a href="index.html" class="navbar-brand">HTTP2Rulez!</a>
+                </div>
 
-		            	<p>
-		                    This site was created with the idea to help people to get rid of the dark workarounds we were living since Web was created. Which workarounds? Those we called "optimizations", for example:
-		                    <ol>
-		                    	<li>1. Image sprites</li>
-								<li>2. Sharding</li>
-								<li>3. Including resources directly in the page (inlining)</li>
-								<li>4. Concatenating files</li>
-								<li>5. Pack Components into a multipart document</li>
-							</ol>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                  <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="web-components.html">Web Components</a>
+                        </li>
+                        <li>
+                            <a class="selected" href="about.html">About</a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </header>
 
-							<p>
-								There are <a href="http://slides.com/ipeychev/http-2-0-and-quic-protocols-of-the-near-future-and-why-they-re-important#/5">more</a> here... actually, you may read <a href="http://chimera.labs.oreilly.com/books/1230000000545/ch11.html">this chapter</a> from <a href="http://chimera.labs.oreilly.com/books/1230000000545"><em>High Performance Browser Networking</em></a>, an awesome book by <a href="https://www.igvita.com/">Ilya Grigorik</a>.
-							</p>
-		                </p>
+        <!-- Page Content -->
+        <div class="container page" id="webComponents">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h1>Why we created this site</h1>
 
-		                <h2>Wanna help?</h2>
+                        <p>
+                            This site was created with the idea to help people to get rid of the dark workarounds we were living since Web was created. Which workarounds? Those we called "optimizations", for example:
+                            <ol>
+                                <li>1. Image sprites</li>
+                                <li>2. Sharding</li>
+                                <li>3. Including resources directly in the page (inlining)</li>
+                                <li>4. Concatenating files</li>
+                                <li>5. Pack Components into a multipart document</li>
+                            </ol>
 
-		                <p>
-		                    Do you want to help us to create more exciting examples? If so, please <a href="https://github.com/ipeychev/http2rulez.com">fork</a> the project and send us pull request. You won't get much, but at least you will spend your efforts to make Web better.
-		                </p>
-		            </div>
-		        </div>
-		    </div>
+                            <p>
+                                There are <a href="http://slides.com/ipeychev/http-2-0-and-quic-protocols-of-the-near-future-and-why-they-re-important#/5">more</a> here... actually, you may read <a href="http://chimera.labs.oreilly.com/books/1230000000545/ch11.html">this chapter</a> from <a href="http://chimera.labs.oreilly.com/books/1230000000545"><em>High Performance Browser Networking</em></a>, an awesome book by <a href="https://www.igvita.com/">Ilya Grigorik</a>.
+                            </p>
+                        </p>
 
-		    <hr>
-	    </div>
+                        <h2>Wanna help?</h2>
 
-	    <div class="container">
-	        <!-- Footer -->
-	        <footer>
-	            <div class="row">
-	                <div class="col-lg-12">
-	                    <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014. The images used in this site belong to their authors.</p>
-	                </div>
-	            </div>
-	        </footer>
+                        <p>
+                            Do you want to help us to create more exciting examples? If so, please <a href="https://github.com/ipeychev/http2rulez.com">fork</a> the project and send us pull request. You won't get much, but at least you will spend your efforts to make Web better.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-	    </div>
-	    <!-- /.container -->
+            <hr>
+        </div>
+
+        <div class="container page">
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014.<br>Thanks to <a href="https://github.com/shigeki">Shigeki Ohtsu</a>, <a href="https://github.com/molnarg">Gábor Molnár</a> and <a href="http://www.chromium.org/spdy/http2">Johnny Graettinger</a> for their awesome work on HTTP/2 and the advices they provided me!</p>
+
+                        <div class="server-sponsor">
+                            <div>
+                                The server has been provided by:
+                            </div>
+                        </div>
+
+                        <a href="https://altscale.com"><img src="assets/images/altscale-logo-200px.png"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
     </body>
 </html>
