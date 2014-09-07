@@ -74,8 +74,6 @@
         <div class="col-md-12">
             <h1>HTTP/2, SPDY and QUIC rulez and here is the evidence</h1>
 
-            <hr>
-
             <div>
                 <p>
                     The purpose of this site is to show what is the difference when same content is being served via different protocols - <a href="http://http2rulez.com">HTTP</a>, <a href="https://http2rulez.com">HTTP/2</a> (please note HTTP/2 implementation requires Chrome Canary for now), <a href="https://http2rulez.com:8082">SPDY</a> and <a href="https://http2rulez.com:8081">raw SSL</a>.
@@ -96,6 +94,14 @@
                 <p>
                 Note: In order to see how these pages load via HTTP/2, you have to use Chrome with SPDY/4 (HTTP 2.0) flag enabled. You may enable it from Chrome flags page - type in Chrome address bar "chrome://flags" and search in the page for "HTTP/2" or "SPDY/4".
             </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12" id="timingResult">
+            Loading timing events, please wait...
         </div>
     </div>
 
@@ -392,6 +398,11 @@
     <script src="js/shuffle.js"></script>
     <script src="js/jquery.shapeshift.js"></script>
     <script src="js/homepage.js"></script>
+    <script src="js/profiler.js"></script>
+
+    <script>
+        new __Profiler().init(document.getElementById('timingResult'));
+    </script>
 
 </body>
 

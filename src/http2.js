@@ -25,6 +25,7 @@ var dependencies = [
 	'/js/shuffle.js',
 	'/js/jquery.shapeshift.js',
 	'/js/homepage.js',
+	'/js/profiler.js',
 	'/assets/images/boat-1170x400.jpeg',
 	'/assets/images/snow-1170x400.jpeg',
 	'/assets/images/beach-1170x400.jpeg',
