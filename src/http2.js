@@ -17,7 +17,6 @@ var dependencies = [
 	'/assets/css/font-awesome.css',
 	'/assets/css/header.css',
 	'/assets/css/main.css',
-	'/assets/images/country-1170x400.jpeg',
 	'/js/jquery-1.11.0.js',
 	'/js/jquery-ui.min.js',
 	'/js/bootstrap.min.js',
@@ -41,6 +40,7 @@ var dependencies = [
 	'/assets/images/san-fran.jpeg',
 	'/assets/images/cheetah.jpeg',
 	'/assets/images/altscale-logo-200px.png',
+	'/assets/images/country-1170x400.jpeg',
 	'/assets/fonts/fontawesome-webfont.woff?v=4.1.0',
 	'/assets/fonts/glyphicons-halflings-regular.woff'
 ];
