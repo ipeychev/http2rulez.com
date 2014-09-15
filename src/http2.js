@@ -1,8 +1,7 @@
 var http2 = require('http2');
 var fs = require('fs');
 var path = require('path');
-var static = require('node-static'),
-    fileServer;
+var static = require('node-static');
 
 var options = {
     key: fs.readFileSync(path.join(__dirname, '..', '..', 'cert/http2rulez.com.key')),
@@ -11,12 +10,15 @@ var options = {
 
 var file = new static.Server('../public');
 
-var dependencies = [
+var cssDependencies = [
 	'/assets/css/bootstrap.css',
 	'/assets/css/magnific-popup.css',
 	'/assets/css/font-awesome.css',
 	'/assets/css/header.css',
-	'/assets/css/main.css',
+	'/assets/css/main.css'
+];
+
+var jsDependencies = [
 	'/js/jquery-1.11.0.js',
 	'/js/jquery-ui.min.js',
 	'/js/bootstrap.min.js',
@@ -25,6 +27,9 @@ var dependencies = [
 	'/js/jquery.shapeshift.js',
 	'/js/homepage.js',
 	'/js/profiler.js',
+];
+
+var imgDependencies = [
 	'/assets/images/boat-1170x400.jpeg',
 	'/assets/images/snow-1170x400.jpeg',
 	'/assets/images/beach-1170x400.jpeg',
@@ -45,16 +50,17 @@ var dependencies = [
 	'/assets/fonts/glyphicons-halflings-regular.woff'
 ];
 
+var allDependencies = cssDependencies.concat(jsDependencies, imgDependencies);
+
 http2.createServer(options, function(request, response) {
     request.addListener('end', function () {
-        var filename = path.join(__dirname, request.url);
+        console.log('Request: ' + request.url);
 
-        console.log('Request:' + request.url);
-
-         if (response.push && (request.url === '/' || request.url === '/index.html')) {
+        if (response.push && (request.url === '/' || request.url === '/index.html')) {
 				response.writeHead('200');
-           	
-				dependencies.forEach(function(item) {
+
+				// In this test only CSS resources will be pushed
+				cssDependencies.forEach(function(item) {
 					console.log('Pushing resouce: ' + item);
 
 					var push = response.push(item);
@@ -67,7 +73,7 @@ http2.createServer(options, function(request, response) {
 
 					fs.createReadStream(path.join(__dirname, '..', 'public', item)).pipe(push);
 				});
-		 
+
 				fs.createReadStream(path.join('..', 'public', 'index.html')).pipe(response);
 		}
 		else {
