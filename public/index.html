@@ -90,15 +90,24 @@
                 <a class="btn btn-primary btn-lg" href="https://http2rulez.com:8082">SPDY</a>
                 <a class="btn btn-primary btn-lg" href="https://http2rulez.com:8081">HTTPS</a>
 
-                <p>
-                    <em>
-                    Note: Chrome stable currently does not support HTTP/2. Use Canary instead with SPDY/4 (HTTP 2.0) flag enabled. You may enable it from the flags page - type "chrome://flags" in address bar and search for "HTTP/2" or "SPDY/4".
-                    </em>
-                </p>
+                <h3>Current browser support for HTTP/2</h3>
 
-                <p>
-                    Click on the links above to <em>feel</em> what is difference on site loading, use <a href="http://www.webpagetest.org/">webpagetest.org</a> to check the site, or use the development tools of Chrome, Firefox, Safari or IE11. You may also try via mobile browsers and also mobile networks.
-                </p>
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">
+                    <span class="glyphicon glyphicon-ok"></span>&nbsp;<a href="http://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> - you have to enable SPDY/4 flag by typing "chrome://flags" in address bar and search for "HTTP/2" or "SPDY/4"
+                  </li>
+                  <li class="list-group-item list-group-item-success">
+                    <span class="glyphicon glyphicon-ok"></span>&nbsp;<a href="https://nightly.mozilla.org/">Firefox Nightly</a>
+                  </li>
+                  <li class="list-group-item list-group-item-danger">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;<a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> (in development)
+                  </li>
+                  <li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;<a href="https://www.apple.com/safari/">Safari</a></li>
+                </ul>
+
+                <h3>Webpagetest.org is our best friend in performance checking!</h3>
+                    Using <a href="http://www.webpagetest.org/">Webpagetest.org</a> to check how the site behaves is highly recommendable. The development tools of browsers are very good starting point too. When you test, be sure that you checked via mobile networks and slow Internet connections too.
+                </h3>
             </div>
         </div>
     </div>
